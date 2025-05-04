@@ -1,5 +1,6 @@
-package com.example.restfulwebservices;
+package com.example.restfulwebservices.User;
 
+import com.example.restfulwebservices.ErrorHandling.UserNotFoundException;
 import com.example.restfulwebservices.Post.Post;
 import com.example.restfulwebservices.repo.PostRepo;
 import com.example.restfulwebservices.repo.UserRepo;
@@ -42,7 +43,7 @@ public class UserJpaResource {
         Optional<User> user = userRepo.findById(id);
 
         if(user.isEmpty())
-            throw new  UserNotFoundException("id"+id);
+            throw new UserNotFoundException("id"+id);
 
         EntityModel<User> entityModel = EntityModel.of(user.get());
         WebMvcLinkBuilder linkBuilder = linkTo(methodOn(this.getClass()).retrieveAllUser());

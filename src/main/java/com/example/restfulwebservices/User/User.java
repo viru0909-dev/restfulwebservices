@@ -1,4 +1,4 @@
-package com.example.restfulwebservices;
+package com.example.restfulwebservices.User;
 
 import com.example.restfulwebservices.Post.Post;
 import com.fasterxml.jackson.annotation.JsonIgnore;

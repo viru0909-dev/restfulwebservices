@@ -1,6 +1,6 @@
 package com.example.restfulwebservices.Post;
 
-import com.example.restfulwebservices.User;
+import com.example.restfulwebservices.User.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
